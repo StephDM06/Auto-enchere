@@ -18,6 +18,7 @@ header {
 .logo_text {
     height: 8vh;
     margin-top: 20px;
+    margin-left: -10%;
 }
 
 nav {
@@ -39,25 +40,33 @@ nav button:hover {
 }
 
 body {
-    padding: 20px;
+    margin-top: 120px;
     background-image: url(images/background2.jpg);
     background-size: cover;
     height: 100vh;
     background-attachment: fixed;
+    color: black;
+    padding-left: 60%;
 }
 
 .container_annonce {
-    margin-top: 60px;
-    padding: 40px 0px 20px 30px;
-    background-color: white;
+    margin-top: 170px;
 }
-
-.titre_annonce {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+.container_annonce button{
+        background-color: rgb(66, 21, 21);
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        border-radius: 3px;
 }
-
-ul{
-    background-color: white;
-    margin-top: -20px;
-    padding: 0px 0px 20px 50px;
+.annonce button {
+        background-color: rgb(66, 21, 21);
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 10px;
+        border-radius: 3px;
 }

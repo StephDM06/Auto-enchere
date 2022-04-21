@@ -1,4 +1,6 @@
-<?php session_start();?>
+<link rel="stylesheet" href="style_annonce1.css">
+
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -8,7 +10,7 @@
 
     <title> Auto enchere </title>
 
-    <link rel="stylesheet" href="style_annonce.css">
+
 </head>
 
 
@@ -62,15 +64,16 @@ $annonces = $query->fetchAll(PDO::FETCH_ASSOC);
 </div>
 <?php
 foreach ($annonces as  $annonce) { ?>
-    <ul class="liste_annonce">
-        <li> <strong> Annonce : <?php echo $annonce["id"] ?> </strong></li>
-        <li> <strong> Vendu par : <?php echo $annonce["prenom"] ?> </strong></li>
-        <li> Prix de réserve : <?= $annonce["prix_depart"] ?></li>
-        <li> Marque : <?= $annonce["marque"]; ?></li>
-        <li> Modèle : <?= $annonce["modele"]; ?></li>
-        <li> Année : <?= $annonce["annee"]; ?></li>
+    <div id="liste_annonce">
+        <ul>
+            <li> <strong> Annonce : <?php echo $annonce["id"] ?> </strong></li>
+            <li> <strong> Vendu par : <?php echo $annonce["prenom"] ?> </strong></li>
+            <li> Prix de réserve : <?= $annonce["prix_depart"] ?></li>
+            <li> Marque : <?= $annonce["marque"]; ?></li>
+            <li> Modèle : <?= $annonce["modele"]; ?></li>
+            <li> Année : <?= $annonce["annee"]; ?></li>
 
-        <a href="detail_annonce.php?annonce=<?= $annonce["id"]; ?>"> <button> En savoir plus </button> </a>
-    </ul>
-
+            <a href="detail_annonce.php?annonce=<?= $annonce["id"]; ?>"> <button> En savoir plus </button> </a>
+        </ul>
+    </div>
 <?php } ?>

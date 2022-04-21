@@ -27,7 +27,7 @@ $lastPrice = $price->fetch();
 
     <title> Auto enchere</title>
 
-    <link rel="stylesheet" href="style_detail_annonce.css">
+    <link rel="stylesheet" href="style_detail_annonce1.css">
 
 </head>
 

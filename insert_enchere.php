@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="style_insert_enchere.css">
-
 <?php
 
 // Insertion des  encheres dans notre base de données
@@ -29,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style_insert_enchere1.css">
     <title> Auto Enchere</title>
 
 </head>
@@ -41,10 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="index.php"><img src="images/logo_text.png" alt="" class="logo_text" /></a>
 
         <nav>
-            <a href="connexion.php"> <button> Connexion </button> </a>
-            <a href="inscription.php"> <button> Inscription </button> </a>
-            <a href="edit_profil.php"> <button> Modifier votre profil </button> </a>
-            <a href="deconnexion.php"><button> Déconnexion</button></a>
+            <?php if (isset($_SESSION["user_id"])) { ?>
+                <a href="edit_profil.php"> <button> Modifier votre profil </button> </a>
+                <a href="deconnexion.php"><button> Déconnexion </button></a>
+
+            <?php } else { ?>
+                <a href="connexion.php"> <button> Connexion </button> </a>
+                <a href="inscription.php"> <button> Inscription </button> </a>
+            <?php } ?>
         </nav>
 
     </header>

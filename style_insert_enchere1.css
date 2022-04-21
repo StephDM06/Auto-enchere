@@ -1,3 +1,5 @@
+/* style entete */
+
 header {
     background-color: #ffffff;
     position: fixed;
@@ -8,6 +10,13 @@ header {
     display: flex;
     justify-content: space-between;
     border-bottom: 4px solid rgb(66, 21, 21);
+}
+body {
+    padding: 20px;
+    background-image: url(images/background2.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
 }
 
 .logo {
@@ -39,14 +48,33 @@ nav button:hover {
     opacity: 0.8;
 }
 
-body {
-    margin-top: 120px;
-    /* background-image: url(images/background2.jpg);
-    background-size: cover;
-    height: 100vh;
-    background-attachment: fixed; */
+
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 42%;
 }
 
-.container_annonce {
-    margin-top: 170px;
+button {
+    background-color: rgb(66, 21, 21);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.img_enchere {
+    float: right;
+    width: 45%;
+    margin-left: -280px;
+}
+.result {
+    position: fixed;
+    top: 23%;
+    left: 35%;
+    font-size: 2rem;
+    font-weight: 600;
 }
