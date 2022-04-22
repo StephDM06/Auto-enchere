@@ -51,84 +51,118 @@ if (isset($_SESSION['user_id'])) {
         }
     }
 ?>
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <form method="POST" action="edit_profil.php">
-        <u>
-            <h2>Nom :</h2>
-        </u>
-        <br />
-        <br />
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style_edit_profil.css">
+        <title>Document</title>
+    </head>
 
+    <body>
 
-        <label> Entrez votre nouveau nom : </label>
-        <input type="text" name="newnom" placeholder="<?= $user["nom"]; ?>">
+        <header>
 
-        <br />
-        <br />
-        <hr />
+            <a href="index.php"><img src="images/logo.png" alt="" class="logo" /></a>
+            <a href="index.php"><img src="images/logo_text.png" alt="" class="logo_text" /></a>
 
+            <nav>
+                <?php if (isset($_SESSION["user_id"])) { ?>
+                    <a href="edit_profil.php"> <button> Modifier votre profil </button> </a>
+                    <a href="deconnexion.php"><button> Déconnexion </button></a>
 
-        <u>
-            <h2>Prenom :</h2>
-        </u>
-        <br />
-        <br />
+                <?php } else { ?>
+                    <a href="connexion.php"> <button> Connexion </button> </a>
+                    <a href="inscription.php"> <button> Inscription </button> </a>
+                <?php } ?>
+            </nav>
 
+        </header>
 
-        <label>Entrez votre nouveau prenom :</label>
-        <input type="text" name="newprenom" placeholder="<?= $user["prenom"]; ?>">
-
-        <br />
-        <br />
-        <hr />
-
-
-
-        <u>
-            <h2>Email :</h2>
-        </u>
-
-
-        <br />
-        <br />
-
-        <label for="email">Entrez votre nouvel email :</label>
-        <input type="text" name="newemail" placeholder="<?= $user["email"]; ?>">
-
-        <br />
-        <br />
-        <hr />
+        <div class="div_form ">
+            <form method="POST" action="edit_profil.php">
+                <u>
+                    <h2>Nom :</h2>
+                </u>
+                <br />
+                <br />
 
 
+                <label> Entrez votre nouveau nom : </label>
+                <input type="text" name="newnom" placeholder="<?= $user["nom"]; ?>">
 
-        <u>
-            <h2>Mot de passe :</h2>
-        </u>
-        <label>Entrez votre nouveau mot de passe :</label>
-        <input type="password" name="newmdp1" placeholder="...">
-
-        <br />
-        <br />
-
-        <label>Confirmation du nouveau mot de passe :</label>
-        <input type="password" name="newmdp2" placeholder="..." />
-
-        <br />
-        <br />
+                <br />
+                <br />
+                <hr />
 
 
-        <input type="submit" name="submit" value="Mettre à jour mon profil !" />
-        <?php
-        if (isset($editResult) && $result == true) {
-            echo "Vos données ont été mises à jour !"; ?>
+                <u>
+                    <h2>Prenom :</h2>
+                </u>
+                <br />
+                <br />
 
-        <?php } ?>
 
-    </form>
-    <a href="index.php"><button>Retour à l'accueil</button></a>
+                <label>Entrez votre nouveau prenom :</label>
+                <input type="text" name="newprenom" placeholder="<?= $user["prenom"]; ?>">
+
+                <br />
+                <br />
+                <hr />
 
 
 
-<?php } else {
+                <u>
+                    <h2>Email :</h2>
+                </u>
+
+
+                <br />
+                <br />
+
+                <label for="email">Entrez votre nouvel email :</label>
+                <input type="text" name="newemail" placeholder="<?= $user["email"]; ?>">
+
+                <br />
+                <br />
+                <hr />
+
+
+
+                <u>
+                    <h2>Mot de passe :</h2>
+                </u>
+                <label>Entrez votre nouveau mot de passe :</label>
+                <input type="password" name="newmdp1" placeholder="...">
+
+                <br />
+                <br />
+
+                <label>Confirmation du nouveau mot de passe :</label>
+                <input type="password" name="newmdp2" placeholder="..." />
+
+                <br />
+                <br />
+
+
+                <input type="submit" name="submit" value="Mettre à jour mon profil !" />
+                <?php
+                if (isset($editResult) && $result == true) {
+                    echo "Vos données ont été mises à jour !"; ?>
+
+                <?php } ?>
+
+            </form>
+        </div>
+        <a href="index.php"><button>Retour à l'accueil</button></a>
+
+
+
+    <?php } else {
     echo  "Vos deux mot de passe ne correspondent pas !";
 }
+    ?>
+    </body>
+
+    </html>
