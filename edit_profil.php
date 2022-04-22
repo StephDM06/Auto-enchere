@@ -56,7 +56,7 @@ if (isset($_SESSION['user_id'])) {
 
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style_edit_profil.css">
+        <link rel="stylesheet" href="style_edit_profil2.css">
         <title>Document</title>
     </head>
 
@@ -155,9 +155,10 @@ if (isset($_SESSION['user_id'])) {
 
             </form>
         </div>
-        <a href="index.php"><button>Retour à l'accueil</button></a>
+        <div id="retour">
+            <a href="index.php"><button>Retour à l'accueil</button></a>
 
-
+        </div>
 
     <?php } else {
     echo  "Vos deux mot de passe ne correspondent pas !";

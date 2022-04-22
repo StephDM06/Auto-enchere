@@ -51,10 +51,11 @@ nav button:hover {
 form {
     font-family: "Roboto", sans-serif;
     position: fixed;
-    left: 5%;
+    left: 30%;
+    margin-top:3%;
     z-index: 1;
     background: #ffffff;
-    width: 800px;
+    width: 700px;
     padding: 45px;
     text-align: left;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -92,4 +93,24 @@ form button:hover,
 form button:active,
 form button:focus {
     background: rgb(34, 10, 10);
+}
+#retour{
+    Margin-top:5%;
+}
+#retour button{
+        font-family: "Roboto",
+        sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: rgb(56, 17, 17);
+        width: 10%;
+        margin-left: 15%;
+        margin-right: 10%;
+        margin-top:25%;
+        border: 0;
+        padding: 12px;
+        color: #ffffff;
+        font-size: 14px;
+        border-radius: 2px;
+        cursor: pointer;
 }
