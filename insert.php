@@ -18,6 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prix = htmlspecialchars($_POST["prix"]);
     // On recupere l'id user vendeur grace à la session de la personne connecté
     $id_user_vendeur = $_SESSION["user_id"];
+    $date= date('Y-m-d');
+    if ($date_fin_annonce < $date ){
+        echo "Merci de vérifier votre date limite";
+    } else {
 
 
     $requete = $dataBase->prepare("INSERT INTO annonce (marque,modele,annee,kilometre,energie,puissance,
@@ -26,6 +30,7 @@ description,date_fin_annonce,prix_depart, id_user_vendeur) VALUES (?,?,?,?,?,?,?
         $marque, $modele, $annee, $kilometre, $energie, $puissance,
         $description, $date_fin_annonce, $prix, $id_user_vendeur
     ]);
+}
 }
 
 ?>

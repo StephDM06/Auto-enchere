@@ -56,7 +56,7 @@ if (isset($_SESSION['user_id'])) {
 
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style_edit_profil2.css">
+        <!-- <link rel="stylesheet" href="style_edit_profil2.css"> -->
         <title>Document</title>
     </head>
 
