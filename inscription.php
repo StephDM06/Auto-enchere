@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <title> Auto Enchere</title>
 
-    <link rel="stylesheet" href="style_inscript.css">
+    <link rel="stylesheet" href="style_inscript1.css">
 </head>
 
 <body>
@@ -16,10 +18,21 @@
         <a href="index.php"><img src="images/logo_text.png" alt="" class="logo_text" /></a>
 
         <nav>
-            <a href="connexion.php"> <button> Connexion </button> </a>
-            <a href="inscription.php"> <button> Inscription </button> </a>
-            <a href="edit_profil.php"> <button> Modifier votre profil </button> </a>
-            <a href="deconnexion.php"><button> Déconnexion</button></a>
+            <?php if (isset($_SESSION["user_id"])) { ?>
+                <a href="edit_profil.php"> <button> Modifier votre profil </button> </a>
+                <a href="deconnexion.php"><button> Déconnexion </button></a>
+
+            <?php } else { ?>
+                <a href="connexion.php"> <button> Connexion </button> </a>
+                <a href="inscription.php"> <button> Inscription </button> </a>
+            <?php } 
+            
+            if (isset($_SESSION["user_firstname"])) {
+            ?> <p> Bienvenue <?php echo $_SESSION["user_firstname"]; ?>, vous êtes connecté(e) </p>
+            <?php } //else {
+            //header('Location: inscription.php');
+            //} 
+            ?>
         </nav>
 
     </header>

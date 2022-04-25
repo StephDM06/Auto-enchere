@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Auto enchere</title>
-    <link rel="stylesheet" href="style_connexion.css">
+    <link rel="stylesheet" href="style_connexion1.css">
 </head>
 <header>
 
